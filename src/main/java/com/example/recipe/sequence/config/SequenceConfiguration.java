@@ -1,5 +1,6 @@
 package com.example.recipe.sequence.config;
 
+import com.example.recipe.sequence.DatePrefixGenerator;
 import com.example.recipe.sequence.SequenceGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +10,7 @@ public class SequenceConfiguration {
     @Bean
     public DatePrefixGenerator datePrefixGenerator() {
         DatePrefixGenerator datePrefixGenerator = new DatePrefixGenerator();
-        datePrefixGenerator.setPattern("yyyyMMdd");
+        //datePrefixGenerator.setPattern("yyyyMMdd");
 
         return datePrefixGenerator;
     }
@@ -19,7 +20,7 @@ public class SequenceConfiguration {
         SequenceGenerator sequenceGenerator = new SequenceGenerator();
         sequenceGenerator.setInitial(10000);
         sequenceGenerator.setSuffix("A");
-        sequenceGenerator.setPrefixGenerator(datePrefixGenerator());
+        //sequenceGenerator.setPrefixGenerator(datePrefixGenerator());
 
         return  sequenceGenerator;
     }
