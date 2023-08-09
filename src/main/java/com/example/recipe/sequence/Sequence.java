@@ -1,4 +1,4 @@
-package com.example.recipe.domain;
+package com.example.recipe.sequence;
 
 public class Sequence {
     private final String id;

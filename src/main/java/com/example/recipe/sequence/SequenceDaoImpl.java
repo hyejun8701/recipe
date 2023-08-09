@@ -1,7 +1,7 @@
-package com.example.recipe;
+package com.example.recipe.sequence;
 
-import com.example.recipe.domain.Sequence;
-import com.example.recipe.domain.SequenceDao;
+import com.example.recipe.sequence.Sequence;
+import com.example.recipe.sequence.SequenceDao;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

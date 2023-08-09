@@ -1,9 +1,7 @@
 package com.example.recipe;
 
-import com.example.recipe.config.SequenceGeneratorConfig;
-import com.example.recipe.domain.SequenceDao;
-import com.example.recipe.util.SequenceGenerator;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.recipe.shop.Product;
+import com.example.recipe.shop.config.ShopConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,8 +15,8 @@ import org.springframework.context.annotation.FilterType;
 			@ComponentScan.Filter(
 			type = FilterType.REGEX,
 			pattern = {
-					"com.example.recipe.*.*Dao",
-					"com.example.recipe.*.*Service"
+					"com.example.recipe.sequence.*Dao",
+					"com.example.recipe.sequence.*Service"
 			})
 		},
 		excludeFilters = {
@@ -33,10 +31,11 @@ public class RecipeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RecipeApplication.class, args);
 
-		ApplicationContext context = new AnnotationConfigApplicationContext("com.example.recipe");
-		SequenceDao sequenceDao = (SequenceDao) context.getBean("sequenceDao");
-		System.out.println(sequenceDao.getNextValue("IT"));
-		System.out.println(sequenceDao.getNextValue("IT"));
+		ApplicationContext context = new AnnotationConfigApplicationContext(ShopConfiguration.class);
+		Product aaa = context.getBean("aaa", Product.class);
+		Product cdrw = context.getBean("cdrw", Product.class);
+		System.out.println(aaa);
+		System.out.println(cdrw);
 	}
 
 }

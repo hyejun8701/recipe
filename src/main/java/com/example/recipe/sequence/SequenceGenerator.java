@@ -1,4 +1,4 @@
-package com.example.recipe.util;
+package com.example.recipe.sequence;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

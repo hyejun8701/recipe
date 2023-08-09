@@ -1,6 +1,6 @@
-package com.example.recipe.config;
+package com.example.recipe.sequence.config;
 
-import com.example.recipe.util.SequenceGenerator;
+import com.example.recipe.sequence.SequenceGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
